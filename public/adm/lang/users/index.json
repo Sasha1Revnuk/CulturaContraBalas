@@ -1,0 +1,20 @@
+{
+    "ua": {
+        "areYouSure": "Ви впевнені?",
+        "youWannaDeleteUser": "Ви збираєтесь видалити користувача?",
+        "yesDelete": "Так, видалити!",
+        "cancelDelete": "Відмінити!"
+    },
+    "ru": {
+        "areYouSure": "Вы уверенны?",
+        "youWannaDeleteUser": "Вы собираетесь удалить пользователя?",
+        "yesDelete": "Да, удалить!",
+        "cancelDelete": "Отмена!"
+    },
+    "en": {
+        "areYouSure": "Are you sure?",
+        "youWannaDeleteUser": "Are you want to delete user?",
+        "yesDelete": "Yes, delete!",
+        "cancelDelete": "Cancel!"
+    }
+}

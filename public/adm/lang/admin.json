@@ -1,0 +1,14 @@
+{
+    "ua": {
+        "areYouSure": "Ви впевнені?",
+        "youWannaDeleteItem": "Ви збираєтесь видалити елемент",
+        "yesDelete": "Так, видалити!",
+        "cancelDelete": "Відмінити!"
+    },
+    "en": {
+        "areYouSure": "Are you sure?",
+        "youWannaDeleteItem": "Are you want to delete element?",
+        "yesDelete": "Yes, delete!",
+        "cancelDelete": "Cancel!"
+    }
+}

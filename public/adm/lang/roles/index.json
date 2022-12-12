@@ -1,0 +1,20 @@
+{
+    "ua": {
+        "areYouSure": "Ви впевнені?",
+        "youWannaDeleteRole": "Ви збираєтесь видалити роль?",
+        "yesDelete": "Так, видалити!",
+        "cancelDelete": "Відмінити!"
+    },
+    "ru": {
+        "areYouSure": "Вы уверенны?",
+        "youWannaDeleteRole": "Вы собираетесь удалить роль?",
+        "yesDelete": "Да, удалить!",
+        "cancelDelete": "Отмена!"
+    },
+    "en": {
+        "areYouSure": "Are you sure?",
+        "youWannaDeleteRole": "Are you want to delete role?",
+        "yesDelete": "Yes, delete!",
+        "cancelDelete": "Cancel!"
+    }
+}

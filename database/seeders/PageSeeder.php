@@ -1,0 +1,50 @@
+<?php
+
+namespace Database\Seeders;
+
+use App\Classes\Admin\PageEnumerator;
+use App\Models\Page;
+use App\Models\PageTranslation;
+use App\Services\LanguageService;
+use Illuminate\Database\Seeder;
+
+class PageSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     *
+     * @return void
+     */
+    public function run()
+    {
+        $this->createMainPage();
+    }
+
+    private function createMainPage()
+    {
+        $page = Page::updateOrCreate([
+            'slug' => PageEnumerator::MAINPAGE_SLUG,
+        ], []);
+
+        PageTranslation::updateOrCreate([
+            'page_id' => $page->id,
+            'language_slug' => LanguageService::LANGUAGE_ES,
+        ], [
+            'title' => 'Principal',
+        ]);
+
+        PageTranslation::updateOrCreate([
+            'page_id' => $page->id,
+            'language_slug' => LanguageService::LANGUAGE_EN,
+        ], [
+            'title' => 'Main',
+        ]);
+
+        PageTranslation::updateOrCreate([
+            'page_id' => $page->id,
+            'language_slug' => LanguageService::LANGUAGE_UA,
+        ], [
+            'title' => 'Головна',
+        ]);
+    }
+}

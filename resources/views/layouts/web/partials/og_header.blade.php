@@ -1,0 +1,12 @@
+<meta content="{{asset('assets/imgages/go.jpg')}}" itemprop="image">
+<meta property="og:image" content="{{asset('assets/imgages/go.jpg')}}">
+<meta property="og:image:width" content="968"/>
+<meta property="og:image:height" content="504"/>
+<meta property="og:image:alt" content="{{env('APP_NAME')}}">
+<meta name="telegram:image" content="{{asset('assets/imgages/go.jpg')}}">
+<meta name="twitter:image" content="{{asset('assets/imgages/go.jpg')}}">
+<meta name="viber:image" content="{{asset('assets/imgages/go.jpg')}}">
+<meta property="og:image:type" content="image/jpeg"/>
+<meta property="og:title" content="{{env('APP_NAME')}}">
+<meta property="og:type" content="website">
+<meta property="og:url" content="{{env('APP_URL')}}">
