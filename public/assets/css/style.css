@@ -715,6 +715,11 @@ li.search a {
 	background-color:#fdcd27;
 	color:#fff;
 }
+
+.blog .pagination a.active-link {
+	background-color:#fdcd27;
+	color:#fff;
+}
 .blog .pagination > li:first-child > a, .pagination > li:first-child > span {
 	margin-left: 0;
 	border-top-left-radius: 0px;

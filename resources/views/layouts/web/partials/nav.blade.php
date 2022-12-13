@@ -8,7 +8,8 @@
 <!-- Collect the nav links, forms, and other content for toggling -->
 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav navbar-right">
-        <li><a href="" class="active">HOME</a></li>
+        <li><a @if(request()->route()->getName() === 'events.index') style="color:#ffd133"
+               @endif href="{{route('events.index')}}">{{__('site.events')}}</a></li>
         <li class="dropdown"><a href="" class="dropdown-toggle"
                                 data-toggle="dropdown">{{\App\Services\LanguageService::getLangualgeTitle()[app()->getLocale()]}}
                 <b

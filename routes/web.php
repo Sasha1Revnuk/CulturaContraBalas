@@ -44,6 +44,10 @@ Route::group(["middleware" => ['locale']], function () {
     require base_path('routes/system/client/site.php');
 
     Route::get('/', [\App\Http\Controllers\Web\MainController::class, 'index'])->name('main.index');
+    Route::get('/events', [\App\Http\Controllers\Web\EventController::class, 'index'])->name('events.index');
+    Route::get('/event/{event:slug}', [\App\Http\Controllers\Web\EventController::class, 'single'])->name(
+        'events.single'
+    );
 
     Route::middleware(['auth'])->name('cabinet.')->prefix('cabinet')->group(function () {
         Route::get('/', 'MainController@index')->name('main');

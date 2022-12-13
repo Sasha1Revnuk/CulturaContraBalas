@@ -70,7 +70,7 @@ class EventRepository
             $this->updateOrCreateTranslates($event->id, $data, $language);
         }
 
-        if ($data['image']) {
+        if (isset($data['image'])) {
             $this->saveImage($event, $data['image']);
         }
         return $event;
@@ -81,7 +81,7 @@ class EventRepository
         $event->slug = Utils::createUnigueSlug($event, $data['title_' . LanguageService::LANGUAGE_EN]);
         $event->save();
         $this->updateOrCreateTranslates($event->id, $data);
-        if ($data['image']) {
+        if (isset($data['image'])) {
             $this->saveImage($event, $data['image']);
         }
     }

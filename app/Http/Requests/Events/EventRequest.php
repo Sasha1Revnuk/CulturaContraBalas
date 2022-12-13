@@ -27,7 +27,7 @@ class EventRequest extends FormRequest
         $rules = LanguageService::getForRequest([
             'title' => ['required', 'string', 'max:190'],
             'short_description' => ['required', 'string', 'max:190'],
-            'description' => ['required', 'string', 'max:190'],
+            'description' => ['required', 'string', 'max:10000'],
             'meta_description' => ['nullable', 'string', 'max:190'],
             'meta_keywords' => ['nullable', 'string', 'max:190'],
             'meta_robots' => ['nullable', 'string', 'max:190'],

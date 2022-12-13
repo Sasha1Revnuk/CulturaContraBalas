@@ -46,7 +46,9 @@
                             id="description_{{$language}}"
                             :required="true"
                             :value="$eventTranslations?->where('language_slug', $language)?->first()->description"
-                            :customAttributes="[]"
+                            :customAttributes="[
+                                'data-image' => true
+                            ]"
                     >
                     </x-admin.form.simple.textarea>
                 </div>
