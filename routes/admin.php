@@ -18,5 +18,10 @@ Route::middleware(
                 '/main-page-edit/{pageTranslation}',
                 [\App\Http\Controllers\Admin\MainController::class, 'editor']
             )->name('editor');
+
+            Route::post(
+                '/main-page-seo/store',
+                [\App\Http\Controllers\Admin\MainController::class, 'storeSeo']
+            )->name('storeSeo');
         });
     });

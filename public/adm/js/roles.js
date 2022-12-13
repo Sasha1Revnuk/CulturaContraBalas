@@ -163,9 +163,9 @@ var __webpack_exports__ = {};
   !*** ./resources/js/adm/roles.js ***!
   \***********************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _adm_lang_admin_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../adm/lang/admin.json */ "./public/adm/lang/admin.json");
+/* harmony import */ var _adm_lang_admin_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../adm/lang/admin.json */ "./public/adm/lang/admin.json");
 
-var dataHelper = __webpack_require__(/*! ../../../adm/js-helpers/dataHelper.js */ "./public/adm/js-helpers/dataHelper.js");
+var dataHelper = __webpack_require__(/*! ../../adm/js-helpers/dataHelper.js */ "./public/adm/js-helpers/dataHelper.js");
 $(document).ready(function () {
   if ($('#models').length) {
     var columns = [{

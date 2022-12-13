@@ -11,7 +11,7 @@ return [
         'save' => 'Зберегти',
         'select_action' => 'Вибрати дію',
         'close' => 'Закрити',
-
+        'info_stored_successfully' => 'Інформацію збережено успішно',
     ],
     'logs' => [
         'action_description' => 'Опис дії',

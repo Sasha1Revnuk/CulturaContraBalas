@@ -11,6 +11,7 @@ return [
         'save' => 'Save',
         'select_action' => 'Select action',
         'close' => 'Close',
+        'info_stored_successfully' => 'Information saved successfully',
 
     ],
     'logs' => [

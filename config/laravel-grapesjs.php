@@ -186,7 +186,7 @@ return [
                 'name' => 'gjs-plugin-ckeditor',
                 'scripts' => [
 //                    'https://cdn.ckeditor.com/4.14.0/full-all/ckeditor.js',
-                    'https://unpkg.com/grapesjs-plugin-ckeditor',
+//                    'https://unpkg.com/grapesjs-plugin-ckeditor',
                 ],
                 'options' => [
                     'position' => 'left',

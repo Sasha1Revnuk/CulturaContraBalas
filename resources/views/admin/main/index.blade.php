@@ -24,7 +24,7 @@
 
         </div>
         <div class="col-md-8">
-            <form action="" method="post" enctype="multipart/form-data">
+            <form action="{{route('admin.main.storeSeo')}}" method="post" enctype="multipart/form-data">
                 @csrf
                 <x-admin.card :withHeader="true" :withFooter="true">
                     <x-slot name="header"
@@ -50,9 +50,20 @@
                                     <div class="row d-flex justify-content-center">
                                         <div class="col-md-8">
                                             <x-admin.form.simple.input
-                                                    field="{{$language}}_meta_descriptions"
-                                                    label="Meta Descriptions"
-                                                    id="{{$language}}_meta_descriptions"
+                                                    field="title_{{$language}}"
+                                                    label="Title"
+                                                    id="title_{{$language}}"
+                                                    value="{{$pageTranslations->where('language_slug', $language)->first()?->title}}"
+                                                    :customAttributes="[
+                                                        'placeholder' => 'Title ' . $language
+                                                ]"
+                                            >
+                                            </x-admin.form.simple.input>
+                                        </div><div class="col-md-8">
+                                            <x-admin.form.simple.input
+                                                    field="meta_description_{{$language}}"
+                                                    label="Meta Description"
+                                                    id="meta_description_{{$language}}"
                                                     value="{{$pageTranslations->where('language_slug', $language)->first()?->metaDescription}}"
                                                     :customAttributes="[
                                                         'placeholder' => 'Meta Descriptions ' . $language
@@ -62,9 +73,9 @@
                                         </div>
                                         <div class="col-md-8">
                                             <x-admin.form.simple.input
-                                                    field="{{$language}}_meta_keywords"
+                                                    field="meta_keywords_{{$language}}"
                                                     label="Meta Keywords"
-                                                    id="{{$language}}_meta_keywords"
+                                                    id="meta_keywords_{{$language}}"
                                                     value="{{$pageTranslations->where('language_slug', $language)->first()?->metaKeywords}}"
                                                     :customAttributes="[
                                                         'placeholder' => 'Meta Keywords ' . $language
@@ -74,9 +85,9 @@
                                         </div>
                                         <div class="col-md-8">
                                             <x-admin.form.simple.input
-                                                    field="{{$language}}_meta_robots"
+                                                    field="meta_robots_{{$language}}"
                                                     label="Meta Robots"
-                                                    id="{{$language}}_meta_robots"
+                                                    id="meta_robots_{{$language}}"
                                                     value="{{$pageTranslations->where('language_slug', $language)->first()?->metaRobots}}"
                                                     :customAttributes="[
                                                         'placeholder' => 'Meta Robots ' . $language

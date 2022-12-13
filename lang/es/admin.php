@@ -11,6 +11,7 @@ return [
         'save' => 'Ahorrar',
         'select_action' => 'Elige una acción',
         'close' => 'cerca',
+        'info_stored_successfully' => 'Información guardada con éxito',
 
     ],
     'logs' => [

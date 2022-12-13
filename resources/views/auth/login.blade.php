@@ -66,13 +66,13 @@
             <div class="mt-5 text-center">
 
                 <div>
-                    <p>{{__('admin.auth.already_havent_account')}} <a href="/register"
-                                                                      class="fw-medium text-primary"> {{__('admin.auth.register')}}</a>
-                    </p>
-                    <p><a href="{{route('password.request')}}"
-                          class="fw-medium text-primary"> {{__('admin.auth.forgot_password')}}</a></p>
-                    <p>©
-                        <script>document.write(new Date().getFullYear())</script>
+{{--                    <p>{{__('admin.auth.already_havent_account')}} <a href="/register"--}}
+{{--                                                                      class="fw-medium text-primary"> {{__('admin.auth.register')}}</a>--}}
+{{--                    </p>--}}
+{{--                    <p><a href="{{route('password.request')}}"--}}
+{{--                          class="fw-medium text-primary"> {{__('admin.auth.forgot_password')}}</a></p>--}}
+{{--                    <p>--}}
+                    ©<script>document.write(new Date().getFullYear())</script>
                         <a href="https://isitlab.com/en">ISITLab</a> .
                 </div>
             </div>

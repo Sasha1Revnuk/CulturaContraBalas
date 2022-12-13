@@ -40,12 +40,12 @@ Route::get('setlocale/{lang}', function ($lang) {
 })->name('setlocale');
 
 Route::group(["middleware" => ['locale']], function () {
-//    require __DIR__ . '/auth.php';
+    require __DIR__ . '/auth.php';
+    require base_path('routes/system/client/site.php');
 
     Route::get('/', [\App\Http\Controllers\Web\MainController::class, 'index'])->name('main.index');
 
     Route::middleware(['auth'])->name('cabinet.')->prefix('cabinet')->group(function () {
         Route::get('/', 'MainController@index')->name('main');
     });
-//    require base_path('routes/system/client/site.php');
 });

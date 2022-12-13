@@ -20,14 +20,18 @@ class MainController extends Controller
             'page' => $pageTranslate,
             'meta' => $this->getMeta(
                 $pageTranslate->title,
-                $pageTranslate->meta?->getDescription,
-                $pageTranslate->meta?->getKeywords,
-                $pageTranslate->meta?->getRobots
+                $pageTranslate->metaDescription,
+                $pageTranslate->metaKeywords,
+                $pageTranslate->metaRobots
             )
         ];
         $pageTranslate->setPlaceholder(
             'header_placeholder',
             view('layouts/web/partials.nav')
+        );
+        $pageTranslate->setPlaceholder(
+            'footer_placeholder',
+            view('layouts/web/partials.footer')
         );
         $pageTranslate->setPlaceholder(
             'testimonials_placeholder',
