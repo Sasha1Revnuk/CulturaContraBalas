@@ -103,6 +103,7 @@ return [
         'logs' => 'Logs',
         'content' => 'Content',
         'stories' => 'Stories',
+        'events' => 'Events',
     ],
     'pagesData' => [
         'mainPageTitle' => 'Main',
@@ -121,6 +122,15 @@ return [
         'index' => 'Stories',
         'name' => 'Name',
         'text' => 'Text',
+    ],
+    'events' => [
+        'index' => 'Events',
+        'title' => 'Title',
+        'short_description' => 'Short Description',
+        'description' => 'Description',
+        'info' => 'Information',
+        'image' => 'Image',
+
     ]
 
 ];

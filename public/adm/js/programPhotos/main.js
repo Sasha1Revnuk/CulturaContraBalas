@@ -118,9 +118,9 @@ var __webpack_exports__ = {};
   !*** ./resources/js/adm/programPhotos/main.js ***!
   \************************************************/
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _adm_lang_admin_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../adm/lang/admin.json */ "./public/adm/lang/admin.json");
+/* harmony import */ var _adm_lang_admin_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../adm/lang/admin.json */ "./public/adm/lang/admin.json");
 
-var sweetAlertHelper = __webpack_require__(/*! ../../adm/js-helpers/sweetAlertHelper.js */ "./public/adm/js-helpers/sweetAlertHelper.js");
+var sweetAlertHelper = __webpack_require__(/*! ../../../adm/js-helpers/sweetAlertHelper.js */ "./public/adm/js-helpers/sweetAlertHelper.js");
 $(document).ready(function () {
   $('body').on('click', '.programPhotosShow', function () {
     fetchData();

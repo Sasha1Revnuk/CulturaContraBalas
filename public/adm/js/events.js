@@ -159,9 +159,9 @@ module.exports = JSON.parse('{"ua":{"areYouSure":"Ви впевнені?","youWa
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-/*!***********************************!*\
-  !*** ./resources/js/adm/roles.js ***!
-  \***********************************/
+/*!************************************!*\
+  !*** ./resources/js/adm/events.js ***!
+  \************************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _adm_lang_admin_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../../adm/lang/admin.json */ "./public/adm/lang/admin.json");
 
@@ -169,27 +169,33 @@ var dataHelper = __webpack_require__(/*! ../../../adm/js-helpers/dataHelper.js *
 $(document).ready(function () {
   if ($('#models').length) {
     var columns = [{
-      name: "title",
-      width: "90%"
+      name: "sort",
+      width: "1%",
+      className: "table-text-align-center",
+      visible: false
+    }, {
+      name: "id",
+      className: "table-text-align-center",
+      width: "5%"
+    }, {
+      name: "sorting",
+      className: "table-text-align-center order",
+      width: "5%"
+    }, {
+      name: "title"
     }, {
       name: "actions",
       className: "table-text-align-center",
       width: "10%"
     }];
-    var url = "".concat(language, "/admin-menu/api/roles");
-    var data = {
-      search: function to() {
-        return $('#search').val();
-      }
-    };
-    var blocks = dataHelper.getDatatable(columns, url, data, false);
-    $('.keyup').keyup(function () {
-      $('#models').DataTable().ajax.reload();
-    });
+    var url = "".concat(language, "/admin-menu/api/events");
+    var data = {};
+    var blocks = dataHelper.getDatatable(columns, url, data, true);
+    dataHelper.rowReorder(blocks, "".concat(language, "/admin-menu/api/events/sorting"));
   }
   $('body').on('click', '.delete', function (e) {
     e.preventDefault();
-    dataHelper.deleteItem(_adm_lang_admin_json__WEBPACK_IMPORTED_MODULE_0__, "".concat(language, "/admin-menu/api/roles/delete/").concat($(this).attr('data-role')), $(this).attr('data-href'));
+    dataHelper.deleteItem(_adm_lang_admin_json__WEBPACK_IMPORTED_MODULE_0__, "".concat(language, "/admin-menu/api/events/delete/").concat($(this).attr('data-model')), null);
   });
 });
 })();

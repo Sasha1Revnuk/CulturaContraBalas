@@ -93,6 +93,8 @@ return [
         'logs' => 'Логування',
         'content' => 'Контент',
         'stories' => 'Історії',
+        'events' => 'Події',
+
     ],
     'pagesData' => [
         'mainPageTitle' => 'Головна',
@@ -111,5 +113,14 @@ return [
         'index' => 'Історії',
         'name' => 'Ім\'я',
         'text' => 'Текст',
+    ],
+    'events' => [
+        'index' => 'Події',
+        'title' => 'Назва',
+        'short_description' => 'Короткий опис',
+        'description' => 'Опис',
+        'info' => 'Інформація',
+        'image' => 'Зображення',
+
     ]
 ];

@@ -21,6 +21,12 @@
                         ]
                     ]"
                 ></x-admin.menu.multiple>
+                <x-admin.menu.single
+                        title="{{__('admin.menu.events')}}"
+                        route="admin.events.index"
+                        menuIcon="dripicons-blog"
+                >
+                </x-admin.menu.single>
 
                 @if(auth()->user()->hasAnyDirectPermission(\App\Enumerators\Admin\RolesEnumerator::getPermissionForRootAdmin()))
                     <x-admin.menu.title>{{__('admin.menu.rootTitle')}}</x-admin.menu.title>

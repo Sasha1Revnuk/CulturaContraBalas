@@ -25,11 +25,23 @@ Route::middleware(
             )->name('storeSeo');
         });
 
-        Route::prefix('stories')->name('stories.')->group(function (){
+        Route::prefix('stories')->name('stories.')->group(function () {
             Route::get('/', [\App\Http\Controllers\Admin\StoryController::class, 'index'])->name('index');
             Route::get('/create', [\App\Http\Controllers\Admin\StoryController::class, 'create'])->name('create');
             Route::get('/edit/{story}', [\App\Http\Controllers\Admin\StoryController::class, 'edit'])->name('edit');
             Route::post('/store', [\App\Http\Controllers\Admin\StoryController::class, 'store'])->name('store');
-            Route::post('/update/{story}', [\App\Http\Controllers\Admin\StoryController::class, 'update'])->name('update');
+            Route::post('/update/{story}', [\App\Http\Controllers\Admin\StoryController::class, 'update'])->name(
+                'update'
+            );
+        });
+
+        Route::prefix('events')->name('events.')->group(function () {
+            Route::get('/', [\App\Http\Controllers\Admin\EventController::class, 'index'])->name('index');
+            Route::get('/create', [\App\Http\Controllers\Admin\EventController::class, 'create'])->name('create');
+            Route::get('/edit/{event}', [\App\Http\Controllers\Admin\EventController::class, 'edit'])->name('edit');
+            Route::post('/store', [\App\Http\Controllers\Admin\EventController::class, 'store'])->name('store');
+            Route::post('/update/{event}', [\App\Http\Controllers\Admin\EventController::class, 'update'])->name(
+                'update'
+            );
         });
     });

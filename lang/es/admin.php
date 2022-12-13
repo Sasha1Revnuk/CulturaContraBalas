@@ -94,6 +94,7 @@ return [
         'logs' => 'Iniciando sesión',
         'content' => 'Contenido',
         'stories' => 'Historias',
+        'events' => 'Eventos',
 
     ],
     'pagesData' => [
@@ -113,5 +114,14 @@ return [
         'index' => 'Historias',
         'name' => 'Nombre',
         'text' => 'Texto',
+    ],
+    'events' => [
+        'index' => 'Eventos',
+        'title' => 'Titular',
+        'short_description' => 'Breve descripción',
+        'description' => 'Descripción',
+        'info' => 'Información',
+        'image' => 'Imagen',
+
     ]
 ];
