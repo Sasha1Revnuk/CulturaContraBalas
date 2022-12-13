@@ -102,6 +102,7 @@ return [
         'rootTitle' => 'Root menu',
         'logs' => 'Logs',
         'content' => 'Content',
+        'stories' => 'Stories',
     ],
     'pagesData' => [
         'mainPageTitle' => 'Main',
@@ -115,6 +116,11 @@ return [
     ],
     'programPhotos' => [
         'title' => 'Media library',
+    ],
+    'stories' => [
+        'index' => 'Stories',
+        'name' => 'Name',
+        'text' => 'Text',
     ]
 
 ];

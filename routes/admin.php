@@ -24,4 +24,12 @@ Route::middleware(
                 [\App\Http\Controllers\Admin\MainController::class, 'storeSeo']
             )->name('storeSeo');
         });
+
+        Route::prefix('stories')->name('stories.')->group(function (){
+            Route::get('/', [\App\Http\Controllers\Admin\StoryController::class, 'index'])->name('index');
+            Route::get('/create', [\App\Http\Controllers\Admin\StoryController::class, 'create'])->name('create');
+            Route::get('/edit/{story}', [\App\Http\Controllers\Admin\StoryController::class, 'edit'])->name('edit');
+            Route::post('/store', [\App\Http\Controllers\Admin\StoryController::class, 'store'])->name('store');
+            Route::post('/update/{story}', [\App\Http\Controllers\Admin\StoryController::class, 'update'])->name('update');
+        });
     });

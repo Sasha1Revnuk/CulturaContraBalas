@@ -92,7 +92,9 @@ return [
         'mainPage' => 'Principal',
         'rootTitle' => 'Menú de superadministrador',
         'logs' => 'Iniciando sesión',
-        'content' => 'Contenido'
+        'content' => 'Contenido',
+        'stories' => 'Historias',
+
     ],
     'pagesData' => [
         'mainPageTitle' => 'Principal',
@@ -106,5 +108,10 @@ return [
     ],
     'programPhotos' => [
         'title' => 'Mediateca',
+    ],
+    'stories' => [
+        'index' => 'Historias',
+        'name' => 'Nombre',
+        'text' => 'Texto',
     ]
 ];

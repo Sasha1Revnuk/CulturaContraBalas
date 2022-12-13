@@ -2,44 +2,89 @@
 /******/ 	"use strict";
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./public/adm/js-helpers/sweetAlertHelper.js":
-/*!***************************************************!*\
-  !*** ./public/adm/js-helpers/sweetAlertHelper.js ***!
-  \***************************************************/
+/***/ "./public/adm/js-helpers/dataHelper.js":
+/*!*********************************************!*\
+  !*** ./public/adm/js-helpers/dataHelper.js ***!
+  \*********************************************/
 /***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
 
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "callCenterInfoSweetAlert": () => (/* binding */ callCenterInfoSweetAlert),
-/* harmony export */   "callCenterQuestionSweetAlert": () => (/* binding */ callCenterQuestionSweetAlert)
+/* harmony export */   "deleteItem": () => (/* binding */ deleteItem),
+/* harmony export */   "getDatatable": () => (/* binding */ getDatatable),
+/* harmony export */   "rowReorder": () => (/* binding */ rowReorder)
 /* harmony export */ });
-function callCenterInfoSweetAlert(title, type) {
-  var text = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '';
+function deleteItem(translates, url, redirectUrl) {
+  var dataTableSelector = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : '#models';
   Swal.fire({
-    title: title,
-    icon: type,
-    text: text,
-    position: 'center'
-  });
-}
-function callCenterQuestionSweetAlert(title, text, confirmButtonText, cancelButtonText, callBackSuccess, callBackFalse) {
-  Swal.fire({
-    title: title,
-    text: text,
+    title: translates[lang]['areYouSure'],
+    text: translates[lang]['youWannaDeleteItem'],
     icon: 'question',
     showCancelButton: true,
-    confirmButtonText: confirmButtonText,
-    cancelButtonText: cancelButtonText
+    confirmButtonText: translates[lang]['yesDelete'],
+    cancelButtonText: translates[lang]['cancelDelete']
   }).then(function (result) {
     if (result.value) {
-      if (callBackSuccess) {
-        callBackSuccess();
-      }
-    } else {
-      if (callBackSuccess) {
-        callBackFalse();
-      }
+      $.ajax({
+        type: 'DELETE',
+        url: url,
+        headers: authHeaders
+      }).then(function () {
+        if ($(dataTableSelector).length) {
+          $('#models').DataTable().ajax.reload();
+        } else {
+          window.location.replace(redirectUrl);
+        }
+      });
     }
+  });
+}
+function getDatatable(columns, url, data) {
+  var sortable = arguments.length > 3 && arguments[3] !== undefined ? arguments[3] : false;
+  var dataTableSelector = arguments.length > 4 && arguments[4] !== undefined ? arguments[4] : '#models';
+  return $(dataTableSelector).DataTable({
+    processing: true,
+    autoWidth: false,
+    serverSide: true,
+    lengthMenu: [10, 25, 50, 100, 250, 500, 1000, 2000, 5000],
+    searching: false,
+    ordering: false,
+    responsive: true,
+    columns: columns,
+    order: [[0, 'asc']],
+    rowReorder: sortable ? {
+      selector: 'tr td.order',
+      update: false
+    } : null,
+    ajax: {
+      url: url,
+      type: "GET",
+      headers: authHeaders,
+      data: data
+    }
+  });
+}
+function rowReorder(blocks, url) {
+  var dataTableSelector = arguments.length > 2 && arguments[2] !== undefined ? arguments[2] : '#models';
+  blocks.on('row-reorder', function (e, diff, edit) {
+    var ids = [];
+    var ranges = [];
+    for (var i = 0, ien = diff.length; i < ien; i++) {
+      var rowData = blocks.row(diff[i].node).data();
+      ids.push(rowData[1]);
+      ranges.push(rowData[0]);
+    }
+    $.ajax({
+      type: 'POST',
+      url: url,
+      headers: authHeaders,
+      data: {
+        'ids': ids,
+        'ranges': ranges
+      }
+    }).then(function () {
+      $(dataTableSelector).DataTable().ajax.reload();
+    });
   });
 }
 
@@ -114,60 +159,47 @@ module.exports = JSON.parse('{"ua":{"areYouSure":"Ви впевнені?","youWa
 var __webpack_exports__ = {};
 // This entry need to be wrapped in an IIFE because it need to be isolated against other modules in the chunk.
 (() => {
-/*!************************************************!*\
-  !*** ./resources/js/adm/programPhotos/main.js ***!
-  \************************************************/
+/*!*************************************!*\
+  !*** ./resources/js/adm/stories.js ***!
+  \*************************************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _adm_lang_admin_json__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../../adm/lang/admin.json */ "./public/adm/lang/admin.json");
 
-var sweetAlertHelper = __webpack_require__(/*! ../../adm/js-helpers/sweetAlertHelper.js */ "./public/adm/js-helpers/sweetAlertHelper.js");
+var dataHelper = __webpack_require__(/*! ../../adm/js-helpers/dataHelper.js */ "./public/adm/js-helpers/dataHelper.js");
 $(document).ready(function () {
-  $('body').on('click', '.programPhotosShow', function () {
-    fetchData();
-  });
-  $('body').on('click', '.paginationProgramImage li.page-item a.page-link', function (e) {
+  if ($('#models').length) {
+    var columns = [{
+      name: "sort",
+      width: "1%",
+      className: "table-text-align-center",
+      visible: false
+    }, {
+      name: "id",
+      className: "table-text-align-center",
+      width: "5%"
+    }, {
+      name: "sorting",
+      className: "table-text-align-center order",
+      width: "5%"
+    }, {
+      name: "name"
+    }, {
+      name: "text"
+    }, {
+      name: "actions",
+      className: "table-text-align-center",
+      width: "10%"
+    }];
+    var url = "".concat(language, "/admin-menu/api/stories");
+    var data = {};
+    var blocks = dataHelper.getDatatable(columns, url, data, true);
+    dataHelper.rowReorder(blocks, "".concat(language, "/admin-menu/api/stories/sorting"));
+  }
+  $('body').on('click', '.delete', function (e) {
     e.preventDefault();
-    var page = $(this).attr('href').split('page=')[1];
-    fetchData(page);
-  });
-  $('body').on('click', '.downloadProgramPhoto', function () {
-    window.open("".concat(language, "/admin-menu/program-photos/download/").concat($(this).attr('data-image')), '_blank');
-  });
-  $('body').on('click', '.copyPathProgramPhoto', function () {
-    $(this).html("<div class=\"spinner-border text-white m-1\" style=\"width: 10px !important; height: 10px !important;\" role=\"status\">\n                                                <span class=\"sr-only\">...</span>\n                                            </div>");
-    var imgUrl = $(this).attr('data-image');
-    navigator.clipboard.writeText(imgUrl);
-    var button = $(this);
-    setTimeout(function () {
-      button.html("<i class=\"mdi mdi-content-copy d-block\"></i>");
-    }, 500);
-  });
-  $('body').on('click', '.deleteProgramPhoto', function () {
-    var imageId = $(this).attr('data-image');
-    sweetAlertHelper.callCenterQuestionSweetAlert(_adm_lang_admin_json__WEBPACK_IMPORTED_MODULE_0__[lang]['areYouSure'], '', _adm_lang_admin_json__WEBPACK_IMPORTED_MODULE_0__[lang]['yesDelete'], _adm_lang_admin_json__WEBPACK_IMPORTED_MODULE_0__[lang]['cancelDelete'], function () {
-      $.ajax({
-        type: 'DELETE',
-        url: "".concat(language, "/admin-menu/api/program-photos/delete/").concat(imageId),
-        headers: authHeaders
-      }).then(function (result) {
-        fetchData();
-      });
-    }, function () {});
+    dataHelper.deleteItem(_adm_lang_admin_json__WEBPACK_IMPORTED_MODULE_0__, "".concat(language, "/admin-menu/api/stories/delete/").concat($(this).attr('data-model')), null);
   });
 });
-function fetchData() {
-  var page = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : 1;
-  $.ajax({
-    type: 'GET',
-    url: "".concat(language, "/admin-menu/api/program-photos/index?page=").concat(page),
-    headers: authHeaders
-  }).then(function (result) {
-    $('.programPhotoContainer').html(result);
-    if ($('#programPhotos').is(':visible') == false) {
-      $('#programPhotos').modal('show');
-    }
-  });
-}
 })();
 
 /******/ })()

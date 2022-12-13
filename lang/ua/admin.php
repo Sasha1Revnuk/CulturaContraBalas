@@ -92,6 +92,7 @@ return [
         'rootTitle' => 'Меню Суперадміністратора',
         'logs' => 'Логування',
         'content' => 'Контент',
+        'stories' => 'Історії',
     ],
     'pagesData' => [
         'mainPageTitle' => 'Головна',
@@ -105,5 +106,10 @@ return [
     ],
     'programPhotos' => [
         'title' => 'Медіа бібліотека',
+    ],
+    'stories' => [
+        'index' => 'Історії',
+        'name' => 'Ім\'я',
+        'text' => 'Текст',
     ]
 ];

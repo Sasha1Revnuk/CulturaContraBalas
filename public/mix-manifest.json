@@ -3,5 +3,6 @@
     "/adm/js/users.js": "/adm/js/users.js",
     "/adm/js/roles.js": "/adm/js/roles.js",
     "/adm/js/userAdd.js": "/adm/js/userAdd.js",
-    "/adm/js/programPhotos/main.js": "/adm/js/programPhotos/main.js"
+    "/adm/js/programPhotos/main.js": "/adm/js/programPhotos/main.js",
+    "/adm/js/stories.js": "/adm/js/stories.js"
 }

@@ -10,5 +10,11 @@
         "youWannaDeleteItem": "Are you want to delete element?",
         "yesDelete": "Yes, delete!",
         "cancelDelete": "Cancel!"
+    },
+    "es": {
+        "areYouSure": "Son y el miércoles?",
+        "youWannaDeleteItem": "¿Quieres dividir el elemento?",
+        "yesDelete": "¡Sí, eliminar!",
+        "cancelDelete": "¡Cancelar!"
     }
 }

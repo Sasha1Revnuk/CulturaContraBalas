@@ -6,6 +6,7 @@ namespace App\Http\Controllers\Web;
 use App\Classes\Admin\PageEnumerator;
 use App\Http\Controllers\Controller;
 use App\Models\Page;
+use App\Models\Story;
 use App\Traits\WebMetaTrait;
 
 class MainController extends Controller
@@ -35,7 +36,10 @@ class MainController extends Controller
         );
         $pageTranslate->setPlaceholder(
             'testimonials_placeholder',
-            view('web/pages/includes.testimonials')
+            view(
+                'web/pages/includes.testimonials',
+                ['stories' => Story::oldest('sort')->withTranslations([app()->getLocale()])->get()]
+            )
         );
 
         return view('web.pages.show', $data);

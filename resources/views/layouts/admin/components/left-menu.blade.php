@@ -14,6 +14,10 @@
                             'title' => __('admin.menu.content'),
                             'href' => 'admin.main.index',
                             'params' => []
+                        ], [
+                            'title' => __('admin.menu.stories'),
+                            'href' => 'admin.stories.index',
+                            'params' => []
                         ]
                     ]"
                 ></x-admin.menu.multiple>

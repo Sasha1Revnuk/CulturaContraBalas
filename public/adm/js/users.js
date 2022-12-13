@@ -96,7 +96,7 @@ function rowReorder(blocks, url) {
   \************************************/
 /***/ ((module) => {
 
-module.exports = JSON.parse('{"ua":{"areYouSure":"Ви впевнені?","youWannaDeleteItem":"Ви збираєтесь видалити елемент","yesDelete":"Так, видалити!","cancelDelete":"Відмінити!"},"en":{"areYouSure":"Are you sure?","youWannaDeleteItem":"Are you want to delete element?","yesDelete":"Yes, delete!","cancelDelete":"Cancel!"}}');
+module.exports = JSON.parse('{"ua":{"areYouSure":"Ви впевнені?","youWannaDeleteItem":"Ви збираєтесь видалити елемент","yesDelete":"Так, видалити!","cancelDelete":"Відмінити!"},"en":{"areYouSure":"Are you sure?","youWannaDeleteItem":"Are you want to delete element?","yesDelete":"Yes, delete!","cancelDelete":"Cancel!"},"es":{"areYouSure":"Son y el miércoles?","youWannaDeleteItem":"¿Quieres dividir el elemento?","yesDelete":"¡Sí, eliminar!","cancelDelete":"¡Cancelar!"}}');
 
 /***/ })
 
