@@ -7,18 +7,18 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Page\PageRequest;
 use App\Models\Page;
 use App\Models\PageTranslation;
-use App\Repositories\Admin\MainPage\MainPageRepository;
+use App\Repositories\Admin\About\AboutRepository;
 use Dotlogics\Grapesjs\App\Traits\EditorTrait;
 use Illuminate\Http\Request;
 
 
-class MainController extends Controller
+class AboutController extends Controller
 {
     use EditorTrait;
 
     private $repository;
 
-    public function __construct(MainPageRepository $repository)
+    public function __construct(AboutRepository $repository)
     {
         $this->repository = $repository;
     }
@@ -27,12 +27,12 @@ class MainController extends Controller
     {
         $data = [
             'meta' => [
-                'pageTitle' => __('admin.menu.mainPage'),
+                'pageTitle' => __('admin.menu.about'),
             ],
             'breadcrumbs' => [
-                __('admin.menu.mainPage') => '',
+                __('admin.menu.about') => '',
             ],
-            'pageTranslations' => Page::where('slug', PageEnumerator::MAINPAGE_SLUG)->first()->translations
+            'pageTranslations' => Page::where('slug', PageEnumerator::ABOUTPAGE_SLUG)->first()->translations
 
         ];
 

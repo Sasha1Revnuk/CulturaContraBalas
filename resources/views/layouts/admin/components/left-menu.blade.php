@@ -22,6 +22,12 @@
                     ]"
                 ></x-admin.menu.multiple>
                 <x-admin.menu.single
+                        title="{{__('admin.menu.about')}}"
+                        route="admin.about.index"
+                        menuIcon="dripicons-jewel"
+                >
+                </x-admin.menu.single>
+                <x-admin.menu.single
                         title="{{__('admin.menu.events')}}"
                         route="admin.events.index"
                         menuIcon="dripicons-blog"

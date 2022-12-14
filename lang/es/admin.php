@@ -95,6 +95,7 @@ return [
         'content' => 'Contenido',
         'stories' => 'Historias',
         'events' => 'Eventos',
+        'about' => 'Sobre nosotras',
 
     ],
     'pagesData' => [

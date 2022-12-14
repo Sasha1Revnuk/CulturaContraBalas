@@ -512,8 +512,9 @@ li.search a {
 }
 .main-container {
 	padding-bottom:100px;
-	padding-top:100px;
+	padding-top:50px;
 	background-color:#fff;
+	min-height: calc(100vh - 231px);
 }
 .color-blk {
 	background-color:#f7f6f1;

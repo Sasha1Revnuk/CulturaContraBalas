@@ -94,6 +94,7 @@ return [
         'content' => 'Контент',
         'stories' => 'Історії',
         'events' => 'Події',
+        'about' => 'Про нас',
 
     ],
     'pagesData' => [

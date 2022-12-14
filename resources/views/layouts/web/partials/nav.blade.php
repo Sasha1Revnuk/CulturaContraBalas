@@ -10,6 +10,8 @@
     <ul class="nav navbar-nav navbar-right">
         <li><a @if(request()->route()->getName() === 'events.index') style="color:#ffd133"
                @endif href="{{route('events.index')}}">{{__('site.events')}}</a></li>
+        <li><a @if(request()->route()->getName() === 'about.index') style="color:#ffd133"
+               @endif href="{{route('about.index')}}">{{__('site.about')}}</a></li>
         <li class="dropdown"><a href="" class="dropdown-toggle"
                                 data-toggle="dropdown">{{\App\Services\LanguageService::getLangualgeTitle()[app()->getLocale()]}}
                 <b

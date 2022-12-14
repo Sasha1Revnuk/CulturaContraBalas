@@ -104,6 +104,7 @@ return [
         'content' => 'Content',
         'stories' => 'Stories',
         'events' => 'Events',
+        'about' => 'About Us',
     ],
     'pagesData' => [
         'mainPageTitle' => 'Main',

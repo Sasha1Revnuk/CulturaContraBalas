@@ -1,11 +1,11 @@
 <?php
 
-namespace App\Http\Requests\MainPage;
+namespace App\Http\Requests\Page;
 
 use App\Services\LanguageService;
 use Illuminate\Foundation\Http\FormRequest;
 
-class MainPageRequest extends FormRequest
+class PageRequest extends FormRequest
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -25,10 +25,10 @@ class MainPageRequest extends FormRequest
     public function rules()
     {
         $rules = LanguageService::getForRequest([
-            'title' =>['nullable', 'string', 'max:190'],
-            'meta_description' =>['nullable', 'string', 'max:190'],
-            'meta_keywords' =>['nullable', 'string', 'max:190'],
-            'meta_robots' =>['nullable', 'string', 'max:190'],
+            'title' => ['nullable', 'string', 'max:190'],
+            'meta_description' => ['nullable', 'string', 'max:190'],
+            'meta_keywords' => ['nullable', 'string', 'max:190'],
+            'meta_robots' => ['nullable', 'string', 'max:190'],
         ]);
         return $rules;
     }

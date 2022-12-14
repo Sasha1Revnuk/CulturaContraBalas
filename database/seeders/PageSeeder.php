@@ -18,6 +18,7 @@ class PageSeeder extends Seeder
     public function run()
     {
         $this->createMainPage();
+        $this->createAboutPage();
     }
 
     private function createMainPage()
@@ -45,6 +46,34 @@ class PageSeeder extends Seeder
             'language_slug' => LanguageService::LANGUAGE_UA,
         ], [
             'title' => 'Головна',
+        ]);
+    }
+
+    private function createAboutPage()
+    {
+        $page = Page::updateOrCreate([
+            'slug' => PageEnumerator::ABOUTPAGE_SLUG,
+        ], []);
+
+        PageTranslation::updateOrCreate([
+            'page_id' => $page->id,
+            'language_slug' => LanguageService::LANGUAGE_ES,
+        ], [
+            'title' => 'Sobre nosotras',
+        ]);
+
+        PageTranslation::updateOrCreate([
+            'page_id' => $page->id,
+            'language_slug' => LanguageService::LANGUAGE_EN,
+        ], [
+            'title' => 'About us',
+        ]);
+
+        PageTranslation::updateOrCreate([
+            'page_id' => $page->id,
+            'language_slug' => LanguageService::LANGUAGE_UA,
+        ], [
+            'title' => 'Про нас',
         ]);
     }
 }

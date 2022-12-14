@@ -25,6 +25,19 @@ Route::middleware(
             )->name('storeSeo');
         });
 
+        Route::name('about.')->group(function () {
+            Route::get('/about-page', [\App\Http\Controllers\Admin\AboutController::class, 'index'])->name('index');
+            Route::get(
+                '/about-page-edit/{pageTranslation}',
+                [\App\Http\Controllers\Admin\AboutController::class, 'editor']
+            )->name('editor');
+
+            Route::post(
+                '/about-page-seo/store',
+                [\App\Http\Controllers\Admin\AboutController::class, 'storeSeo']
+            )->name('storeSeo');
+        });
+
         Route::prefix('stories')->name('stories.')->group(function () {
             Route::get('/', [\App\Http\Controllers\Admin\StoryController::class, 'index'])->name('index');
             Route::get('/create', [\App\Http\Controllers\Admin\StoryController::class, 'create'])->name('create');
