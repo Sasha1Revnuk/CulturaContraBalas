@@ -19,6 +19,7 @@ class PageSeeder extends Seeder
     {
         $this->createMainPage();
         $this->createAboutPage();
+        $this->createDonatePage();
     }
 
     private function createMainPage()
@@ -74,6 +75,34 @@ class PageSeeder extends Seeder
             'language_slug' => LanguageService::LANGUAGE_UA,
         ], [
             'title' => 'Про нас',
+        ]);
+    }
+
+    private function createDonatePage()
+    {
+        $page = Page::updateOrCreate([
+            'slug' => PageEnumerator::DONATEPAGE_SLUG,
+        ], []);
+
+        PageTranslation::updateOrCreate([
+            'page_id' => $page->id,
+            'language_slug' => LanguageService::LANGUAGE_ES,
+        ], [
+            'title' => 'Donate',
+        ]);
+
+        PageTranslation::updateOrCreate([
+            'page_id' => $page->id,
+            'language_slug' => LanguageService::LANGUAGE_EN,
+        ], [
+            'title' => 'Donate',
+        ]);
+
+        PageTranslation::updateOrCreate([
+            'page_id' => $page->id,
+            'language_slug' => LanguageService::LANGUAGE_UA,
+        ], [
+            'title' => 'Donate',
         ]);
     }
 }

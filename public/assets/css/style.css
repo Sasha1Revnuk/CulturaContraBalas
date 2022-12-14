@@ -1006,6 +1006,18 @@ input[type="radio"] {
     font-size: 16px;
 }
 
+.copyButton {
+    padding: 6px 15px;
+    background-color: #3a79b9;
+    color: #fff;
+    margin-bottom: 5px;
+    margin-top: 5PX;
+    display: inline-block;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: copy;
+}
+
 .tags a:hover {
     padding: 6px 15px;
     background-color: #fdcd27;

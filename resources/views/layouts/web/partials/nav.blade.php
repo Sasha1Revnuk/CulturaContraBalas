@@ -12,6 +12,8 @@
                @endif href="{{route('events.index')}}">{{__('site.events')}}</a></li>
         <li><a @if(request()->route()->getName() === 'about.index') style="color:#ffd133"
                @endif href="{{route('about.index')}}">{{__('site.about')}}</a></li>
+        <li><a @if(request()->route()->getName() === 'donate.index') style="color:#ffd133"
+               @endif href="{{route('donate.index')}}">{{__('site.donate')}}</a></li>
         <li class="dropdown"><a href="" class="dropdown-toggle"
                                 data-toggle="dropdown">{{\App\Services\LanguageService::getLangualgeTitle()[app()->getLocale()]}}
                 <b

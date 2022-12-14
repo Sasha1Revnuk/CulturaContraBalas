@@ -7,18 +7,18 @@ use App\Http\Controllers\Controller;
 use App\Http\Requests\Page\PageRequest;
 use App\Models\Page;
 use App\Models\PageTranslation;
-use App\Repositories\Admin\About\AboutRepository;
+use App\Repositories\Admin\Donate\DonateRepository;
 use Dotlogics\Grapesjs\App\Traits\EditorTrait;
 use Illuminate\Http\Request;
 
 
-class AboutController extends Controller
+class DonateController extends Controller
 {
     use EditorTrait;
 
     private $repository;
 
-    public function __construct(AboutRepository $repository)
+    public function __construct(DonateRepository $repository)
     {
         $this->repository = $repository;
     }
@@ -27,16 +27,16 @@ class AboutController extends Controller
     {
         $data = [
             'meta' => [
-                'pageTitle' => __('admin.menu.about'),
+                'pageTitle' => __('admin.menu.donate'),
             ],
             'breadcrumbs' => [
-                __('admin.menu.about') => '',
+                __('admin.menu.donate') => '',
             ],
-            'pageTranslations' => Page::where('slug', PageEnumerator::ABOUTPAGE_SLUG)->first()->translations
+            'pageTranslations' => Page::where('slug', PageEnumerator::DONATEPAGE_SLUG)->first()->translations
 
         ];
 
-        return view('admin.about.index', $data);
+        return view('admin.donate.index', $data);
     }
 
     public function editor(Request $request, PageTranslation $pageTranslation)

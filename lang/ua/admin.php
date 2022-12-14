@@ -95,6 +95,7 @@ return [
         'stories' => 'Історії',
         'events' => 'Події',
         'about' => 'Про нас',
+        'donate' => 'Donate',
 
     ],
     'pagesData' => [

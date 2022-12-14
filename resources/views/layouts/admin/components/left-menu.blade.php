@@ -28,6 +28,12 @@
                 >
                 </x-admin.menu.single>
                 <x-admin.menu.single
+                        title="{{__('admin.menu.donate')}}"
+                        route="admin.donate.index"
+                        menuIcon="dripicons-card"
+                >
+                </x-admin.menu.single>
+                <x-admin.menu.single
                         title="{{__('admin.menu.events')}}"
                         route="admin.events.index"
                         menuIcon="dripicons-blog"

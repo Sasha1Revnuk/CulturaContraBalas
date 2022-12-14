@@ -45,6 +45,7 @@ Route::group(["middleware" => ['locale']], function () {
 
     Route::get('/', [\App\Http\Controllers\Web\MainController::class, 'index'])->name('main.index');
     Route::get('/about', [\App\Http\Controllers\Web\AboutController::class, 'index'])->name('about.index');
+    Route::get('/donate', [\App\Http\Controllers\Web\DonateController::class, 'index'])->name('donate.index');
     Route::get('/events', [\App\Http\Controllers\Web\EventController::class, 'index'])->name('events.index');
     Route::get('/event/{event:slug}', [\App\Http\Controllers\Web\EventController::class, 'single'])->name(
         'events.single'

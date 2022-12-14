@@ -5,3 +5,12 @@
 <script src="{{asset('assets/js/bootstrap.js')}}"></script>
 <script src="{{asset('assets/js/script.js')}}"></script>
 <script src="{{asset('assets/js/owl.carousel.js')}}"></script>
+<script>
+    $('body').on('click', '.copyButton', function () {
+        console.log(213)
+        let button = $(this)
+        let data = button.text();
+        navigator.clipboard.writeText(data);
+    })
+
+</script>

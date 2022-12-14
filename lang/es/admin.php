@@ -96,6 +96,7 @@ return [
         'stories' => 'Historias',
         'events' => 'Eventos',
         'about' => 'Sobre nosotras',
+        'donate' => 'Donate',
 
     ],
     'pagesData' => [

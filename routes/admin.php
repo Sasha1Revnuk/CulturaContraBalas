@@ -38,6 +38,19 @@ Route::middleware(
             )->name('storeSeo');
         });
 
+        Route::name('donate.')->group(function () {
+            Route::get('/donate-page', [\App\Http\Controllers\Admin\DonateController::class, 'index'])->name('index');
+            Route::get(
+                '/donate-page-edit/{pageTranslation}',
+                [\App\Http\Controllers\Admin\DonateController::class, 'editor']
+            )->name('editor');
+
+            Route::post(
+                '/donate-page-seo/store',
+                [\App\Http\Controllers\Admin\DonateController::class, 'storeSeo']
+            )->name('storeSeo');
+        });
+
         Route::prefix('stories')->name('stories.')->group(function () {
             Route::get('/', [\App\Http\Controllers\Admin\StoryController::class, 'index'])->name('index');
             Route::get('/create', [\App\Http\Controllers\Admin\StoryController::class, 'create'])->name('create');

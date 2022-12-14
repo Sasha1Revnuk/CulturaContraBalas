@@ -105,6 +105,7 @@ return [
         'stories' => 'Stories',
         'events' => 'Events',
         'about' => 'About Us',
+        'donate' => 'Donate',
     ],
     'pagesData' => [
         'mainPageTitle' => 'Main',
