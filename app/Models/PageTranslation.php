@@ -14,5 +14,5 @@ class PageTranslation extends Model implements Editable
     use HasFactory, TranslationTable, EditableTrait, ModelMeta;
 
     public $relatedTranslationsClass = Page::class;
-    protected $guarded = ['translation_id', 'title', 'gjs_data'];
+    protected $fillable = ['translation_id', 'title', 'gjs_data'];
 }
