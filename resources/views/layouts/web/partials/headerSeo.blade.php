@@ -3,5 +3,6 @@
 </title>
 <meta name="description" content="{{isset($meta['description']) ? $meta['description']  : env('APP_NAME')}}">
 <meta name="keywords" content="{{isset($meta['keywords']) ? $meta['keywords']  : env('APP_NAME')}}">
-<meta name="robots" content="{{isset($meta['robots']) ? $meta['robots'] : env('APP_NAME')}}">
+{{--<meta name="robots" content="{{isset($meta['robots']) ? $meta['robots'] : env('APP_NAME')}}">--}}
+<meta name="robots" content="noindex, nofollow">
 <meta name="csrf-token" content="{{ csrf_token() }}">
