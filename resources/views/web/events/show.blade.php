@@ -15,12 +15,14 @@
                     <div class="col-md-offset-1 col-md-10">
                         <div class="row">
                             <div class=" col-md-3">
-                                <div class="pic"><img src="{{$event->image_url}}" class="img-responsive" alt=""></div>
+                                <div class="pic"><a href="{{route('events.single', ['event' => $event->slug])}}"> <img
+                                                src="{{$event->image_url}}" class="img-responsive" alt=""></a></div>
                             </div>
                             <div class=" col-md-9">
                                 <div class="event-ct">
                                     <h2>
-                                        <a href="{{route('events.single', ['event' => $event->slug])}}">{{$event->translations->first()->title}}</a>
+                                        <a class="btn btn-yellow" style="font-size: 23px"
+                                           href="{{route('events.single', ['event' => $event->slug])}}">{{$event->translations->first()->title}}</a>
                                     </h2>
                                     <p>{{$event->translations->first()->short_description}}</p>
                                 </div>
