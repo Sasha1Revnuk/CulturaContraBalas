@@ -60,7 +60,7 @@ class PageSeeder extends Seeder
             'page_id' => $page->id,
             'language_slug' => LanguageService::LANGUAGE_ES,
         ], [
-            'title' => 'Sobre nosotras',
+            'title' => 'Sobre Nostoros',
         ]);
 
         PageTranslation::updateOrCreate([

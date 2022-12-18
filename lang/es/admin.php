@@ -94,8 +94,8 @@ return [
         'logs' => 'Iniciando sesión',
         'content' => 'Contenido',
         'stories' => 'Historias',
-        'events' => 'Eventos',
-        'about' => 'Sobre nosotras',
+        'events' => 'Proyectos',
+        'about' => 'Sobre Nostoros',
         'donate' => 'Donate',
 
     ],
@@ -118,7 +118,7 @@ return [
         'text' => 'Texto',
     ],
     'events' => [
-        'index' => 'Eventos',
+        'index' => 'Proyectos',
         'title' => 'Titular',
         'short_description' => 'Breve descripción',
         'description' => 'Descripción',

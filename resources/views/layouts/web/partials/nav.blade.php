@@ -8,10 +8,10 @@
 <!-- Collect the nav links, forms, and other content for toggling -->
 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
     <ul class="nav navbar-nav navbar-right">
-        <li><a @if(request()->route()->getName() === 'events.index') style="color:#ffd133"
-               @endif href="{{route('events.index')}}">{{__('site.events')}}</a></li>
         <li><a @if(request()->route()->getName() === 'about.index') style="color:#ffd133"
                @endif href="{{route('about.index')}}">{{__('site.about')}}</a></li>
+        <li><a @if(request()->route()->getName() === 'events.index') style="color:#ffd133"
+               @endif href="{{route('events.index')}}">{{__('site.events')}}</a></li>
         <li><a @if(request()->route()->getName() === 'donate.index') style="color:#ffd133"
                @endif href="{{route('donate.index')}}">{{__('site.donate')}}</a></li>
         <li class="dropdown"><a href="" class="dropdown-toggle"

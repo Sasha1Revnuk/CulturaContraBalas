@@ -1,9 +1,9 @@
 <?php
 
 return [
-    'events' => 'Події',
+    'events' => 'Проекти',
     'about' => 'Про нас',
-    'donate' => 'Donate',
-    'back_to_events' => 'Повернутися до подій',
+    'donate' => 'Як допомогти',
+    'back_to_events' => 'Повернутися до проектів',
 
 ];

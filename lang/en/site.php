@@ -1,9 +1,9 @@
 <?php
 
 return [
-    'events' => 'Events',
+    'events' => 'Projects',
     'about' => 'About',
-    'donate' => 'Donate',
-    'back_to_events' => 'Back to events',
+    'donate' => 'How to help',
+    'back_to_events' => 'Back to projects',
 
 ];
