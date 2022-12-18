@@ -145,7 +145,7 @@ ul {
 }
 
 ul li {
-    color: #686868;
+    color: white;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     list-style: none;
@@ -544,13 +544,13 @@ li.search a {
 /****  sub-footer  ****/
 
 .sub-footer {
-    background: #2c2c2a;
+    background: #4689cd;
     padding-top: 21px;
     padding-bottom: 40px;
 }
 
 .sub-footer i {
-    color: #7f7d77;
+    color: white;
     font-size: 26px;
     margin-left: 10px;
 }
@@ -563,7 +563,7 @@ li.search a {
 
 .sub-footer p {
     margin-bottom: 0px;
-    color: #686868;
+    color: white;
 }
 
 .news-letter .input-group .form-control {

@@ -14,6 +14,7 @@ class AboutController extends Controller
 
     public function index()
     {
+        abort(404);
         $page = Page::where('slug', PageEnumerator::ABOUTPAGE_SLUG)->withTranslations([app()->getLocale()])->first();
         $pageTranslate = $page->translations->first();
         $data = [
