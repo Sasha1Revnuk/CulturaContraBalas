@@ -101,52 +101,7 @@
                 </div>
             </div>
             <div class=" service-blk">
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="blk">
-                            <h2><a href="#">Adopt a Child</a></h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla orci, laoreet id
-                                condimentum vitae.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="blk">
-                            <h2><a href="#">Children in Care</a></h2>
-                            <p>Donec ac adipiscing lorem. Praesent sit amet ipsum quam suspendisse consectetur euismod
-                                lacus.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="blk">
-                            <h2><a href="#">Disabled Children</a></h2>
-                            <p> Integer accumsan fermentum leo, ac vehicula magna imperdiet vel. Vestibulum adipiscing
-                                aliquet imperdiet.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <div class="blk">
-                            <h2><a href="#">Young People</a></h2>
-                            <p>Donec mollis sem massa, nec posuere nisl convallis sed. Vestibulum ornare massa id diam
-                                imperdiet dapibus</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="blk">
-                            <h2><a href="#">Family Support</a></h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur nulla orci, laoreet id
-                                condimentum vitae.</p>
-                        </div>
-                    </div>
-                    <div class="col-md-4">
-                        <div class="blk">
-                            <h2><a href="#">Our Schools</a></h2>
-                            <p>Donec ac adipiscing lorem. Praesent sit amet ipsum quam suspendisse consectetur euismod
-                                lacus.</p>
-                        </div>
-                    </div>
-                </div>
+                projects_placeholder
             </div>
         </div>
     </div>
