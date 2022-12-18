@@ -1,9 +1,12 @@
 <div class="sub-footer">
     <div class="container">
         <div class="row">
+            <div class="col-md-12" style="margin-bottom: 15px;">
+                <a href="{{route('main.index')}}"><img
+                            src="{{asset('assets/images/footer-logo.png')}}" width="100px"
+                            alt="logo"></a></div>
             <div class="col-md-12">
                 <ul class="list-style">
-
                     <li><i class="fa fa-phone-square"></i> +34.633.584.738</li>
                     <li><i class="fa fa-envelope"></i> culturacontrabalas@gmail.com</li>
                 </ul>
