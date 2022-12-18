@@ -17,9 +17,6 @@ class EventController extends Controller
             'events' => Event::withTranslations([app()->getLocale()])->oldest('sort')->paginate(4),
             'meta' => $this->getMeta(
                 __('site.events'),
-                __('site.events'),
-                __('site.events'),
-                __('site.events'),
             )
         ];
 
