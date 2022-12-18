@@ -1017,7 +1017,7 @@ input[type="radio"] {
     display: inline-block;
     border-radius: 4px;
     font-size: 16px;
-    cursor: copy;
+    cursor: pointer;
 }
 
 .tags a:hover {
