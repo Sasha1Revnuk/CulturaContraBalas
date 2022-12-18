@@ -13,7 +13,7 @@
                             src="{{$project->image_url}}" class="img-responsive"></a></div>
             <div class="event-ct">
                 <h2>
-                    <a target="_blank" class="btn btn-yellow"
+                    <a target="_blank" class="btn btn-yellow" style="font-size: 23px"
                        href="{{route('events.single', ['event' => $project->slug])}}">{{$project->translations->first()->title}}</a>
                 </h2>
                 <p>{{$project->translations->first()->short_description}}</p>
