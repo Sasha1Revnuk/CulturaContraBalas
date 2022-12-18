@@ -11,16 +11,16 @@ namespace App\Services;
 
 class LanguageService
 {
-    public function getRequestArray( $request, $field )
+    public function getRequestArray($request, $field)
     {
         return [
-            'es' => $request->get( $field . '_es' ) ?? '',
-            'ua' => $request->get( $field . '_ua' ) ?? '',
-            'en' => $request->get( $field . '_en' ) ?? '',
+            'es' => $request->get($field . '_es') ?? '',
+            'ua' => $request->get($field . '_ua') ?? '',
+            'en' => $request->get($field . '_en') ?? '',
         ];
     }
 
-    public const  LANGUAGES = [ 'es', 'ua', 'en'];
+    public const  LANGUAGES = ['es', 'ua', 'en'];
     public const  LANGUAGE_ES = 'es';
     public const  LANGUAGE_UA = 'ua';
     public const  LANGUAGE_EN = 'en';
@@ -40,7 +40,7 @@ class LanguageService
         return [
             self::LANGUAGE_UA => 'Українська',
             self::LANGUAGE_EN => 'English',
-            self::LANGUAGE_ES => 'Española',
+            self::LANGUAGE_ES => 'Español',
         ];
     }
 
@@ -53,17 +53,16 @@ class LanguageService
         ];
     }
 
-    public static function getForRequest( $fieldsWithParams )
+    public static function getForRequest($fieldsWithParams)
     {
         $rules = [];
 
-        foreach ( $fieldsWithParams as $field => $params ) {
-            foreach ( self::LANGUAGES as $language ) {
-                if ( isset( $params[$language] ) ) {
+        foreach ($fieldsWithParams as $field => $params) {
+            foreach (self::LANGUAGES as $language) {
+                if (isset($params[$language])) {
                     $rules[$field . '_' . $language] = $params[$language];
                 } else {
                     $rules[$field . '_' . $language] = $params;
-
                 }
             }
         }
