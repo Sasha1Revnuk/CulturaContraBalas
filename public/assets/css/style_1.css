@@ -47,12 +47,12 @@
 /*----------------------------------------
 			COLORS
 			
-			      	Primary color								: #4689cd;
+			      	Primary color								: #005bbb;
 				  	Secondry 	color							: #ffd133;
 					h1, h2, h3, h4, h5, h6 					: #302f2c;
 	                p : color										: #686868;
 					a : color										: #302f2c;
-				    a:hover 										: #4689cd;
+				    a:hover 										: #005bbb;
 				    footer : color								:#2c2c2a;
 
 
@@ -137,7 +137,7 @@ a {
 
 a:hover {
     text-decoration: none;
-    color: #3a79b9;
+    color: #005bbb;
 }
 
 ul {
@@ -185,7 +185,7 @@ ul li {
 }
 
 .btn-yellow:hover {
-    background: #3a79b9;
+    background: #005bbb;
     color: #fff;
 }
 
@@ -232,7 +232,7 @@ input.form-control {
 /**** menu-bar  ***/
 
 .header .navbar-default {
-    background-color: #4689cd;
+    background-color: #005bbb;
     border: 0px;
     border-radius: 0px;
     padding-top: 15px;
@@ -423,7 +423,7 @@ li.search a {
 }
 
 .donate-box {
-    background-color: #4689cd;
+    background-color: #005bbb;
     padding: 60px 40px;
     margin-bottom: 30px;
 }
@@ -460,7 +460,7 @@ li.search a {
 }
 
 .yellow-blk {
-    background-color: #3a79b9;
+    background-color: #005bbb;
     padding: 20px;
     max-height: 265px;
 }
@@ -546,7 +546,7 @@ li.search a {
 /****  sub-footer  ****/
 
 .sub-footer {
-    background: #4689cd;
+    background: #005bbb;
     padding-top: 21px;
     padding-bottom: 40px;
 }
@@ -665,7 +665,7 @@ li.search a {
 .yellow-line {
     margin-bottom: 30px;
     margin-top: 30px;
-    border-bottom: 3px solid #4689cd;
+    border-bottom: 3px solid #005bbb;
 }
 
 .destaurate {
@@ -832,7 +832,7 @@ li.search a {
 }
 
 .blog .pagination a {
-    background-color: #3a79b9;
+    background-color: #005bbb;
     color: #fff;
     margin-right: 10px;
     border: none;
@@ -920,7 +920,7 @@ input[type="radio"] {
     font-size: 12px;
     line-height: 1.5;
     border-radius: 3px;
-    background: #3a79b9;
+    background: #005bbb;
     color: #fff;
 }
 
@@ -999,7 +999,7 @@ input[type="radio"] {
 
 .tags a {
     padding: 6px 15px;
-    background-color: #3a79b9;
+    background-color: #005bbb;
     color: #fff;
     margin-bottom: 5px;
     margin-top: 5PX;
@@ -1010,7 +1010,7 @@ input[type="radio"] {
 
 .copyButton {
     padding: 6px 15px;
-    background-color: #3a79b9;
+    background-color: #005bbb;
     color: #fff;
     margin-bottom: 5px;
     margin-top: 5PX;
@@ -1279,7 +1279,7 @@ input[type="radio"] {
 
 .team-detail i {
     font-size: 21px;
-    color: #3a79b9;
+    color: #005bbb;
     margin-bottom: 30px;
     margin-right: 5px;
 }
@@ -1345,7 +1345,7 @@ input[type="radio"] {
 
 .erorr h1 {
     font-size: 200px;
-    color: #4689cd;
+    color: #005bbb;
 }
 
 .erorr p {
@@ -1388,7 +1388,7 @@ input[type="radio"] {
     line-height: 20px;
     color: #fff;
     text-align: center;
-    background-color: #4689cd;
+    background-color: #005bbb;
     -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
     box-shadow: inset 0 -1px 0 rgba(0, 0, 0, .15);
     -webkit-transition: width .6s ease;

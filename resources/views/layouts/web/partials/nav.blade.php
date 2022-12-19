@@ -3,7 +3,8 @@
     <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span
                 class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span>
         <span class="icon-bar"></span></button>
-    <a class="navbar-brand" href="{{route('main.index')}}"><img src="{{asset('assets/images/logo-site.png')}}"
+    <a class="navbar-brand" href="{{route('main.index')}}"><img style="max-height: 45px"
+                                                                src="{{asset('assets/images/logo-site.png')}}"
                                                                 alt="logo"></a></div>
 <!-- Collect the nav links, forms, and other content for toggling -->
 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
