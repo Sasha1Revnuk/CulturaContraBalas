@@ -10,7 +10,7 @@
 
             <div class="col-md-6 text-center" style=" margin-bottom: 55px;">
                 <a href="{{route('main.index')}}"><img
-                            src="{{asset('assets/images/footer_logo_500.png')}}" width="200px"
+                            src="{{asset('assets/images/footer_logo_500.png')}}" width="150px"
                             alt="logo"></a></div>
             <div class="col-md-3 text-right instaLinkDiv" style="padding-top: 45px;"><a style="color:white"
                                                                                         target="__blank"
