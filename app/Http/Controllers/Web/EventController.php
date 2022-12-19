@@ -14,7 +14,7 @@ class EventController extends Controller
     public function index()
     {
         $data = [
-            'events' => Event::withTranslations([app()->getLocale()])->oldest('sort')->paginate(4),
+            'events' => Event::withTranslations([app()->getLocale()])->oldest('sort')->paginate(6),
             'meta' => $this->getMeta(
                 __('site.events'),
             )
