@@ -147,7 +147,7 @@ ul {
 }
 
 ul li {
-    color: white;
+    color: #686868;
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     list-style: none;
@@ -162,6 +162,7 @@ ul li {
 
 .list-style {
     margin-bottom: 30px;
+    color: white;
 }
 
 .list-style li {
