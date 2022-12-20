@@ -1449,6 +1449,15 @@ input[type="radio"] {
 
 .tinyWrap img {
     max-width: 100%;
+    height: auto;
+}
+
+.container .blog {
+    overflow: hidden;
+}
+
+.container .blog .btn {
+    white-space: normal !important;
 }
 
 @media (max-width: 767px) {
