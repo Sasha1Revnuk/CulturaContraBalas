@@ -1443,6 +1443,9 @@ input[type="radio"] {
     margin-top: 15px;
 }
 
+.tinyWrap iframe {
+    max-width: 100%;
+}
 
 @media (max-width: 767px) {
 

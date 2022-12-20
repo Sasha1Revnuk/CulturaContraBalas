@@ -7,7 +7,9 @@
                     <h1 class="text-center">{{$eventTranslation->title}}</h1>
                     <div class="pic"><img src="{{$event->image_url}}" class="img-responsive"
                                           style="opacity: 1!important; margin: 0 auto" alt=""></div>
-                    {!! $eventTranslation->description !!}
+                    <div class="tinyWrap">
+                        {!! $eventTranslation->description !!}
+                    </div>
                     <a href="{{route('events.index')}}" class="btn btn-yellow">{{__('site.back_to_events')}}</a></div>
             </div>
 
