@@ -1447,6 +1447,10 @@ input[type="radio"] {
     max-width: 100%;
 }
 
+.tinyWrap img {
+    max-width: 100%;
+}
+
 @media (max-width: 767px) {
 
 
