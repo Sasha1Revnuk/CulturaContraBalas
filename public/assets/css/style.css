@@ -1452,11 +1452,11 @@ input[type="radio"] {
     height: auto;
 }
 
-.container .blog {
+.container.blog {
     overflow: hidden;
 }
 
-.container .blog .btn {
+.container.blog .btn {
     white-space: normal !important;
 }
 
